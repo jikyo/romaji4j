@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.jikyo.romaji</groupId>
+    <artifactId>romaji</artifactId>
+    <version>0.0.1</version>
+
+    <name>Romaji</name>
+
+    <description>
+        `Romaji` is a converter library to romanize Japanese hiragana/katakana string by standard and IME typing style.
+        Even though [icu::Transliterator](http://userguide.icu-project.org/transforms/general) already has provided the same functions, and returns only one romanized string.
+        However, there exists several different romanization systems, so one hiragana/katakana string has so many romanize string.
+        For example, `"ちゃ"` can be romanized as `"cha"`, `"tya"`, `"chixya"`, `"tixya"`, `"chilya"`, or `"tilya"`.
+        `Romaji` provides romanized strings as many as possible.
+
+        If an input string contained non hiragana/katakana characters (includes kanji), `Romaji` return the characters as same as the input.
+        For example, `Romaji` converts the input `"お茶の水"` to `"o茶no水"`.
+
+        The mapping from hiragana/katakana to romaji is based on common IME's system to type Japanese on a computer.
+        Therefor, `Romaji` does not directly implement the standard system like Hepburn, Nihon-shiki or Kunrei-shiki, but includes them.
+    </description>
+
+    <url>https://github.com/jikyo/romaji4j</url>
+    <inceptionYear>2018</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Junnosuke Moriya</name>
+            <email>shinsen.jikyo@gmail.com</email>
+            <organization>jikyo</organization>
+            <organizationUrl>http://jikyo.github.io/</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/jikyo/romaji4j.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/jikyo/romaji4j.git</developerConnection>
+        <url>https://github.com/jikyo/romaji4j</url>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.5.3</version>
+                    <configuration>
+                        <releaseProfiles>deploy</releaseProfiles>
+                        <tagNameFormat>v@{project.version}</tagNameFormat>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
