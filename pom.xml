@@ -6,7 +6,7 @@
 
     <groupId>com.github.jikyo.romaji</groupId>
     <artifactId>romaji</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <name>Romaji</name>
 
@@ -40,7 +40,7 @@
             <name>Junnosuke Moriya</name>
             <email>shinsen.jikyo@gmail.com</email>
             <organization>jikyo</organization>
-            <organizationUrl>http://jikyo.github.io/</organizationUrl>
+            <organizationUrl>https://jikyo.github.io/</organizationUrl>
         </developer>
     </developers>
 
