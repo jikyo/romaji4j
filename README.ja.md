@@ -52,8 +52,8 @@ public class Main {
 
 ```xml
         <dependency>
-            <groupId>com.github.jikyo.romaji</groupId>
+            <groupId>com.github.jikyo</groupId>
             <artifactId>romaji</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.3</version>
         </dependency>
 ```
