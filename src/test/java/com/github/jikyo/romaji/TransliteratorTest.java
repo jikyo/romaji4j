@@ -40,7 +40,7 @@ public class TransliteratorTest extends TestCase {
                 "僕doraemon",
                 "僕doraemon'",
                 "僕doraemonn"));
-        put("東京都", Arrays.asList("東京都"));
+        put("東京都&123ABC", Arrays.asList());
         put("お茶の水", Arrays.asList("o茶no水"));
     }});
 

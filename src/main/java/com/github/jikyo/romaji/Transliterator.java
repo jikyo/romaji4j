@@ -57,6 +57,7 @@ public class Transliterator {
                 });
 
         return Stream.concat(lookahead1.romajis().stream(), lookahead0.romajis().stream())
+                .filter(s -> !s.equals(src))
                 .distinct()
                 .sorted()
                 .collect(Collectors.toList());
